@@ -1,0 +1,16 @@
+Client ID,Name,LMP (YYYY-MM-DD),Average Cycle Length,Cycle Length Variability,Average Period Duration,Current Phase,Next period (in days)
+1,Jane Doe,2024-01-05,28,2,5,Menstrual Phase,24
+2,Emily Smith,2024-01-12,30,3,6,Ovulation Phase,17
+3,Ava Johnson,2024-01-08,26,1,4,Luteal Phase,11
+4,mina,2023-09-20,29,2,5,Luteal Phase,12
+7,lara,2023-12-22,29,0,5,Follicular Phase,18
+8,elizabeth,2023-10-29,30,0,7,Luteal Phase,2
+9,sarra,2024-01-01,35,6,6,Luteal Phase,6
+10,Lea,2024-01-04,28,1,5,Menstrual Phase,23
+11,anna,2024-02-11,29,2,5,Luteal Phase,11
+12,Sabrina,2024-07-01,29,2,4,Luteal Phase,7
+13,Lina,2024-06-20,31,4,4,Menstrual Phase,29
+14,Lina ,2024-06-17,29,1,4,Follicular Phase,22
+15,G,2024-06-19,31,2,5,Menstrual Phase,28
+16,LANA,2024-04-01,30,2,5,Luteal Phase,7
+17,Charly,2024-07-14,32,3,5,Follicular Phase,23
