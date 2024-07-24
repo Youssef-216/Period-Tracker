@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Period Tracker</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="div1">
+        <img class="logo" src="static/logo2.png" width="400" height="220">
+    </div>
+   
+    <div class="container mt-4">
+        <h1 class="text-center">Period Tracker</h1>
+        <div class="text-center mt-4">
+            <form action="/update" method="post" class="mb-4">
+                <button type="submit" class="btn btn-custom">Update Cycle Phases</button>
+            </form>
+            <form action="/add" method="post" class="mb-4">
+                <div class="form-group">
+                    <input type="text" class="form-control" name="name" placeholder="Enter client's name" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" name="lmp" placeholder="YYYY-MM-DD" required>
+                </div>
+                <div class="form-group">
+                    <input type="number" class="form-control" name="avg_cycle_length" placeholder="Avg Cycle Length" required>
+                </div>
+                <div class="form-group">
+                    <input type="number" class="form-control" name="variability" placeholder="Variability" required>
+                </div>
+                <div class="form-group">
+                    <input type="number" class="form-control" name="period_duration" placeholder="Period Duration" required>
+                </div>
+                <button type="submit" class="btn btn-success">Add Client</button>
+            </form>
+           
+            {% if data %}
+                <h2 class="text-center">Database</h2>
+                <div class="table-responsive">
+                    {{ data|safe }}
+                </div>
+            {% endif %}
+            <form action="/delete" method="post" class="mb-4">
+                <div class="form-group">
+                    <input type="number" class="form-control" name="client_id" placeholder="Enter Client ID to Delete" required>
+                </div>
+                <button type="submit" class="btn btn-danger">Delete Client</button>
+            </form>
+        </div>
+    </div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const cells = document.querySelectorAll('td:nth-child(8)'); // Adjust index if "Current Phase" is not the 7th column
+        cells.forEach(cell => {
+            switch (cell.textContent.trim()) {
+                case 'Menstrual Phase':
+                    cell.classList.add('menstrual-phase');
+                    break;
+                case 'Follicular Phase':
+                    cell.classList.add('follicular-phase');
+                    break;
+                case 'Ovulation Phase':
+                    cell.classList.add('follicular-phase');
+                    break;
+                case 'Luteal Phase':
+                    cell.classList.add('luteal-phase');
+                    break;
+                default:
+                    break;
+            }
+        });
+    });
+</script>
+</body>
+</html>
