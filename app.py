@@ -127,7 +127,7 @@ def days_until_next_period(lmp, avg_cycle_length):
 @app.route('/')
 def index():
     df = pd.read_csv(file_path)
-    return render_template('index.html', data=df.to_html(classes="table table-striped")
+    return render_template('index.html', data=df.to_html(classes="table table-striped"))
 
 @app.route('/update', methods=['POST'])
 def update():
