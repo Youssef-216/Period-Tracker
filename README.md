@@ -9,9 +9,30 @@ Delete Client: Form to delete a client from the database using their Client ID.
 Update Cycle Phases: Button to update the cycle phases for all clients based on their LMP and other parameters.
 Dynamic Styling: Apply specific styles to cells in the "Current Phase" column based on the phase.
 
+---
+
 ## Requirements:
 Python 3.x
 Flask
 pandas
 
+---
 
+## Installation
+If you are using the program for the first time you have to install the libraries first
+```
+git clone https://github.com/Youssef-216/Period-Tracker.git
+cd Perdiod-Tracker
+python3 -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+```
+
+---
+
+## Running the server
+Once you have installed the dependencies you can run the app
+```
+source venv/bin/activate
+python3 app.py
+```
