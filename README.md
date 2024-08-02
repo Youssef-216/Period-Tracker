@@ -26,6 +26,7 @@ cd Perdiod-Tracker
 python3 -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
+python3 app.py
 ```
 
 ---
@@ -33,6 +34,7 @@ pip install -r requirements.txt
 ## Running the server
 Once you have installed the dependencies you can run the app
 ```
+cd Perdiod-Tracker
 source venv/bin/activate
 python3 app.py
 ```
